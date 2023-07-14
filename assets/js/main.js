@@ -1,0 +1,2 @@
+import "./lenis";
+import "./swiper";
