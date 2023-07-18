@@ -1,8 +1,10 @@
+import { gsap } from "gsap";
+
 $(function() {
 
     /* Make header sticky on*/
-    let header = $('#main-header');
-    let lastScroll = 0;
+    let header = $('#header-main');
+    let lastScroll = 0; 
   
     $(window).on( 'scroll', function() {
       const currentScroll = window.pageYOffset;
@@ -20,17 +22,45 @@ $(function() {
     });
 
     /* Set hamburguer menu height */
-    const megaMenu = document.querySelector('.mega-menu-navigation');
-    const navHeight = 75; // Change this to match the actual height of your navigation bar
+    const megaMenu = document.querySelector('.main-menu-wrapper');
+    const navHeight = 0; // Change this to match the actual height of your navigation bar
 
     function setElementHeight() {
       const height = window.innerHeight - navHeight;
       megaMenu.style.setProperty('--element-height', `${height}px`);
     }
 
+    setElementHeight();
+    window.addEventListener('resize', setElementHeight);
+
     /* Hamburguer menu toogle */ 
-    $('.navbar-toggler').on( 'click', function(e) {
-      $('.navbar').toggleClass('nav-open');
+    const $toggleBtn = $('.main-menu-toggle')
+
+    let togglerTl = gsap.timeline({
+      defaults: {
+        duration: 0.7,
+        ease: 'ease-in-out',
+        autoAlpha: 0
+      },
     });
+
+    let $targets = gsap.utils.toArray('.main-menu-content .menu-item');
+
+    togglerTl.from($targets, { x:'-50%', opacity: 0, stagger: 0.15});
+
+    togglerTl.paused(true);
+
+    $toggleBtn.on( 'click', (e) => {
+      $('.navigation-main').toggleClass('nav-open');
+      $('body').toggleClass('nav-open');
+      if (togglerTl.paused()) {
+        togglerTl.play();
+      } else if (togglerTl.reversed()) {
+        togglerTl.restart().timeScale(1);
+      } else {
+        togglerTl.timeScale(2).reverse();
+      }
+    });
+
   
 });

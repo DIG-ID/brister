@@ -1,0 +1,74 @@
+#header-main
+  @apply transition-all duration-700 ease-in-out shadow-transparent
+  .navigation-main
+
+    /* Hamburguer menu toggle */
+    .main-menu-toggle
+      @apply w-[50px] cursor-pointer
+      span
+        @apply block w-full h-[3px] rounded bg-white relative transition-all duration-500 ease-in-out
+        + span
+          @apply mt-2
+        &:nth-child(1)
+          top: 0
+          transform: rotate(0deg)
+        &:nth-child(2)
+          transform: scale(1)
+        &:nth-child(3)
+          bottom: 0
+          transform: rotate(0)
+
+    #brister-logo
+      @apply w-[145px]
+      path
+        @apply fill-white transition-all duration-700
+
+
+    .main-menu-wrapper
+      @apply absolute top-0 left-0 right-0 bottom-0 h-[var(--element-height)] invisible overflow-hidden -z-10
+      &::before
+        @apply content-[''] block absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-dark-green opacity-0 transition-all duration-500 ease-in-out
+      .main-menu-content
+        @apply bg-white w-1/4 h-full -translate-x-full transition-all duration-500 drop-shadow py-32 px-8 flex flex-col justify-between
+        #menu-main-menu
+          @apply flex flex-col gap-6
+          .menu-item
+            a
+              @apply font-montbold text-lg text-dark-green transition-all duration-300 ease-in-out hover:text-lime-green
+
+  /* Menu nav open */
+  .navigation-main.nav-open
+    .main-menu-toggle
+      span
+        @apply bg-dark-green
+        &:nth-child(1)
+          top: 11px
+          transform: rotate(45deg)
+        &:nth-child(2)
+          transform: scale(0)
+        &:nth-child(3)
+          bottom: 11px
+          transform: rotate(135deg)
+    #brister-logo
+      path
+        @apply fill-dark-green
+    .main-menu-wrapper
+      @apply visible
+      &::before
+        @apply opacity-50
+      .main-menu-content
+        @apply translate-x-0
+
+/* Header sticky */
+#header-main.sticky
+  @apply bg-white border-solid border-gray-300 drop-shadow
+  .navigation-main
+    /* Hamburguer menu toggle */
+    .main-menu-toggle
+      span
+        @apply bg-dark-green
+    #brister-logo
+      path
+        @apply fill-dark-green
+
+

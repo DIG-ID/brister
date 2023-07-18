@@ -314,7 +314,7 @@ function brister_theme_acf_op_gc_init() {
 				'menu_title'      => __( 'Brister Theme', 'brister' ),
 				'menu_slug'       => 'brister-theme-general-options',
 				'capability'      => 'edit_posts',
-				'icon_url'        => 'dashicons-admin-appearance',
+				'icon_url'        => get_template_directory_uri() . '/assets/images/brister-theme-icon.png',
 				'redirect'        => false,
 				'update_button'   => __( 'Update Options', 'brister' ),
 				'updated_message' => __( 'Brister Options Updated', 'brister' ),
@@ -357,7 +357,7 @@ add_filter( 'get_the_archive_title', 'brister_theme_remove_archive_prefix' );
 //require get_template_directory() . '/inc/customizer.php';
 
 // Theme custom template tags.
-//require get_template_directory() . '/inc/theme-template-tags.php';
+require get_template_directory() . '/inc/theme-template-tags.php';
 
 
 // The theme admin settings
