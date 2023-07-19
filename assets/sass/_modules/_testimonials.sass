@@ -1,0 +1,16 @@
+.testimonials-carousel
+  .flickity-cell
+    @apply opacity-25
+  .flickity-cell.is-selected
+    @apply opacity-100
+
+  .flickity-page-dots
+    @apply items-center -bottom-12
+    .flickity-page-dot
+      @apply bg-green
+      &:hover
+        @apply bg-dark-green
+      &:focus
+        @apply shadow-none
+    .flickity-page-dot.is-selected
+      @apply bg-lime-green w-4 h-4
