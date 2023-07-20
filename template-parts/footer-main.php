@@ -1,16 +1,30 @@
 <footer class="footer-main">
-	<div class="w-full py-24 px-8 border-t border-dark-green">
+	<div class="w-full py-20 md:py-24 px-4 md:px-8 border-t border-dark-green">
 		<div class="w-full mb-8">
 			<?php do_action( 'theme_logo' ); ?>
 		</div>
-		<div class="w-full grid grid-cols-12 gap-4">
-			<div class="col-span-2">
-				info
+		<div class="w-full grid grid-cols-1 md:grid-cols-12 gap-4">
+			<div class="md:col-span-2">
+				<p class="font-sans text-base text-dark-green leading-7 mb-4"><?php the_field( 'footer_address', 'options' ); ?></p>
+				<?php
+				$email = get_field( 'footer_email', 'options' );
+				if ( $email ) :
+					?><a class="font-sans text-base text-dark-green leading-7 block transition-all duration-300 ease-in-out hover:text-green hover:underline underline-offset-4" href="mailto:<?php echo esc_url( $email ); ?>"> <?php echo $email; ?></a><?php
+				endif;
+				?>
+				<?php
+				$phone = get_field( 'footer_phone', 'options' );
+				$clean_phone = str_replace( ' ', '', $phone );
+				if ( $phone ) :
+					?><a class="font-sans text-base text-dark-green leading-7 block mb-6 transition-all duration-300 ease-in-out hover:text-green hover:underline underline-offset-4" href="tel:<?php echo esc_attr( $clean_phone ); ?>"> <?php echo $phone; ?></a><?php
+				endif;
+				?>
+				<?php do_action( 'socials' ); ?>
 			</div>
-			<div class="col-start-5 col-span-4">
-				newsletter
+			<div class="md:col-start-5 md:col-span-4">
+				<?php do_shortcode( the_field( 'footer_newsletter_shortcode' ) ); ?>
 			</div>
-			<div class="col-start-9 col-span-2">
+			<div class="md:col-start-9 md:col-span-2">
 				<?php
 				wp_nav_menu(
 					array(
@@ -23,7 +37,7 @@
 				);
 				?>
 			</div>
-			<div class="col-span-2">
+			<div class="md:col-span-2">
 				<?php
 				wp_nav_menu(
 					array(
@@ -39,7 +53,7 @@
 		</div>
 	</div>
 
-	<div class="w-full px-8 py-5 flex justify-between items-center border-t border-dark-green">
+	<div class="w-full px-4 md:px-8 py-5 flex justify-between items-center border-t border-dark-green">
 		<p class="font-sans text-xs text-dark-green">
 			<?php
 			$y = date( 'Y' );

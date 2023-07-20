@@ -1,9 +1,9 @@
-<section class="section-testimonials py-36 w-full">
-	<div class="text-center px-8 max-w-screen-md mx-auto">
+<section class="section-testimonials py-20 md:py-36 w-full">
+	<div class="text-center px-4 md:px-8 md:max-w-screen-md mx-auto">
 		<h2 class="title-section text-green"><?php esc_html_e( 'Testimonials', 'brister' ); ?></h2>
 		<p class="description-section text-dark-green">Gutes und gesundes Essen ist Lebensqualität.<br> Zusammen mit unseren Regionalen Partner bieten.</p>
 	</div>
-	<div class="testimonials-carousel">
+	<div class="testimonials-carousel mb-8 md:mb-0">
 		<?php
 		$args = array(
 			'post_type' => 'testimonials',

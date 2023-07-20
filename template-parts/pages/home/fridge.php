@@ -1,6 +1,6 @@
-<section class="section-fridge bg-gradient-to-r from-light-green from-10% via-light-green via-60% to-white to-60% py-36 px-8 w-full grid grid-cols-12 gap-4 items-center">
-	<div class="col-span-4 col-start-2">
-		<h2 class="font-montbold text-6xl text-green uppercase mb-6"><?php the_field( 'fridge_section_title' ); ?></h2>
+<section class="section-fridge bg-gradient-to-t lg:bg-gradient-to-r from-light-green from-10% via-light-green via-60% to-white to-60% py-20 lg:py-36 px-4 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+	<div class="lg:col-span-4 lg:col-start-2 order-2 lg:order-1">
+		<h2 class="title-section font-montbold text-6xl text-green uppercase mb-6"><?php the_field( 'fridge_section_title' ); ?></h2>
 		<p class="font-montlight text-base text-dark-green leading-8 mb-12"><?php the_field( 'fridge_section_description' ); ?></p>
 		<?php
 		if ( have_rows( 'fridge_section_list' ) ) :
@@ -30,7 +30,7 @@
 		endif;
 		?>
 	</div>
-	<div class="col-span-5 col-start-7">
+	<div class="lg:col-span-5 lg:col-start-7 order-1 lg:order-2 mb-12 lg:mb-0 pr-4 lg:pr-0">
 		<?php $fridge_img = get_field( 'fridge_section_image' ); ?>
 		<figure class="relative mb-6 after:content-[''] after:block after:absolute after:bottom-4 after:left-4 after:border-4 after:border-green after:w-full after:h-full after:rounded-3xl">
 			<?php echo wp_get_attachment_image( $fridge_img, 'full', false, array( 'class' => 'max-w-full object-cover rounded-3xl' ) ); ?>

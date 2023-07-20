@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
         autoPlay: 4000,
         pauseAutoPlayOnHover: false,
         prevNextButtons: false,
-        selectedAttraction: 0.020,
-        friction: 0.80
+        selectedAttraction: 0.025,
+        friction: 0.28
       });
     }
 

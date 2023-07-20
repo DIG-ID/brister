@@ -1,5 +1,5 @@
 <header id="header-main" class="header-main w-full fixed top-0 z-10" itemscope itemtype="http://schema.org/WebSite">
-	<nav class="navigation-main px-8 py-6" role="navigation" aria-label="<?php esc_attr_e( 'main navigation', 'brister' ); ?>">
+	<nav class="navigation-main px-4 md:px-8  md:py-6" role="navigation" aria-label="<?php esc_attr_e( 'main navigation', 'brister' ); ?>">
 		<div class="main-header-content flex columns-2 justify-between">
 			<div class="flex items-center gap-3">
 				<button class="main-menu-toggle">
@@ -19,7 +19,7 @@
 				</div>
 			</div>
 
-			<div class="cta-buttons flex items-center gap-3">
+			<div class="cta-buttons flex items-center gap-3 invisible md:visible">
 				<a class="btn btn--secondary" href="">
 					<?php esc_html_e( 'Contact sales', 'brister' ); ?>
 					<svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
