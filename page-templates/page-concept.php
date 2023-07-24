@@ -1,0 +1,15 @@
+<?php
+/**
+ * Template Name: Concept Page Template
+ */
+
+get_header();
+
+do_action( 'before_main_content' );
+	get_template_part( 'template-parts/pages/page', 'header' );
+	get_template_part( 'template-parts/pages/concept/intro' );
+	get_template_part( 'template-parts/pages/concept/concepts' );
+	get_template_part( 'template-parts/pages/concept/philosophie' );
+do_action( 'after_main_content' );
+
+get_footer();
