@@ -1,0 +1,24 @@
+.page-template-page-about
+  .section-teams
+    &::before
+      @apply content-[''] block absolute top-0 left-0 right-0 bottom-0 bg-dark-green
+      -webkit-clip-path: polygon(0 0, 100% 6%, 100% 94%, 0% 100%)
+      clip-path: polygon(0 0, 100% 6%, 100% 94%, 0% 100%)
+      z-index: -1
+
+  .partners-carousel
+    .partner-cell
+      @apply opacity-25
+    .partner-cell.is-selected
+      @apply opacity-100
+
+    .flickity-page-dots
+      @apply items-center -bottom-12
+      .flickity-page-dot
+        @apply bg-green
+        &:hover
+          @apply bg-dark-green
+        &:focus
+          @apply shadow-none
+      .flickity-page-dot.is-selected
+        @apply bg-lime-green w-4 h-4

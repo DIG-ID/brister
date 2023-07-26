@@ -16,5 +16,21 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
+    if (document.body.classList.contains("page-template-page-about")) {
+      /*var partnersflkty = new Flickity( '.partners-carousel', {
+        // options
+        //groupCells: 2,
+        //cellSelector: '.partner-cell',
+        wrapAround: true,
+        imagesLoaded: true,
+        
+        autoPlay: 4000,
+        //pauseAutoPlayOnHover: false,
+        prevNextButtons: false,
+        selectedAttraction: 0.025,
+        friction: 0.28
+      });*/
+    }
+
   }, false);
 });

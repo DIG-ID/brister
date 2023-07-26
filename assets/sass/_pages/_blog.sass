@@ -1,0 +1,70 @@
+.brister-blog-grid
+  .brister-blog-filters
+    &-buttons
+      @apply relative inline-block font-sans font-semibold text-lg text-dark-green bg-light-green whitespace-nowrap rounded-full py-3 px-4 mx-2 outline-none cursor-pointer transition-all duration-300 hover:bg-green hover:text-light-green w-40
+
+    &-buttons.active
+      @apply bg-green text-light-green
+    &-search-wrapper
+      @apply w-[300px]
+    &-search
+      @apply w-full font-sans text-lg text-dark-green bg-light-green rounded-full outline-none py-3 px-6 mx-2
+      &::active
+        @apply outline-none
+      &::focus-visible
+        @apply outline-none
+      &::placeholder
+        @apply font-sans text-lg text-dark-green
+
+
+  .brister-blog-pagination-nav
+    .brister-blog-pagination
+      @apply flex items-center
+      li
+        @apply inline-block font-sans text-base text-dark-green transition-all duration-300 bg-light-green rounded-full py-1 px-3 mx-2
+        &:hover
+          @apply cursor-pointer bg-dark-green text-light-green
+      li.selected
+        @apply bg-dark-green text-light-green
+
+
+  .brister-blog-dot-pulse
+    @apply relative bg-green text-green w-[10px] h-[10px] rounded-[5px] -left-[9999px]
+    box-shadow: 9999px 0 0 -5px
+    animation: dot-pulse 1.5s infinite linear
+    animation-delay: 0.25s
+    &::before,
+    &::after
+      @apply content-[''] inline-block absolute top-0 w-[10px] h-[10px] rounded-[5px] bg-dark-green text-dark-green
+    &::before
+      box-shadow: 9984px 0 0 -5px
+      animation: dot-pulse-before 1.5s infinite linear
+      animation-delay: 0s
+    &::after
+      box-shadow: 10014px 0 0 -5px
+      animation: dot-pulse-after 1.5s infinite linear
+      animation-delay: 0.5s
+
+@keyframes dot-pulse-before
+  0% 
+    box-shadow: 9984px 0 0 -5px
+  30%
+    box-shadow: 9984px 0 0 2px
+  60%, 100%
+    box-shadow: 9984px 0 0 -5px
+
+@keyframes dot-pulse
+  0%
+    box-shadow: 9999px 0 0 -5px
+  30%
+    box-shadow: 9999px 0 0 2px
+  60%, 100%
+    box-shadow: 9999px 0 0 -5px
+
+@keyframes dot-pulse-after
+  0%
+    box-shadow: 10014px 0 0 -5px
+  30%
+    box-shadow: 10014px 0 0 2px
+  60%, 100%
+    box-shadow: 10014px 0 0 -5px

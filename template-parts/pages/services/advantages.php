@@ -1,4 +1,4 @@
-<section class="section-advantages px-8 py-32 grid grid-cols-12 relative ">
+<section class="section-advantages px-8 py-32 grid grid-cols-12 relative">
 	<div class="col-span-6 col-start-4 text-center">
 		<h2 class="title-section text-green"><?php the_field( 'advantages_title' ); ?></h2>
 		<p class="text-body text-dark-green mb-12"><?php the_field( 'advantages_description' ); ?></p>
