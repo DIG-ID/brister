@@ -1,0 +1,36 @@
+.post-template-default
+  .post-content
+    .post-content-wrapper
+      h1
+        @apply font-montbold text-5xl text-dark-green mb-10
+      h2
+        @apply font-montbold text-4xl text-dark-green mb-10
+      h3
+        @apply font-montbold text-3xl text-dark-green mb-10
+      h4
+        @apply font-montbold text-2xl text-dark-green mb-10
+      h5
+        @apply font-montbold text-xl text-dark-green mb-10
+      h6
+        @apply font-montbold text-lg text-dark-green mb-10
+      p
+        @apply font-sans text-dark-green text-base leading-8 mb-10
+      .wp-block-image
+        @apply mb-10
+
+
+  .navigation.post-navigation
+    .nav-links
+      @apply flex
+      .nav-previous,
+      .nav-next
+        @apply w-full text-center py-6 font-sans font-medium text-xl text-light-green
+      .nav-previous
+        @apply bg-dark-green
+        a
+          @apply relative
+          &::before
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='18' viewBox='0 0 10 18' fill='none'%3E%3Cpath d='M9 1L1.65093 7.58586C0.783021 8.36364 0.783021 9.63636 1.65093 10.4141L9 17' stroke='%23E6EADC' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+            @apply block w-4 h-6 bg-pink-400 absolute -left-6
+      .nav-next
+        @apply bg-green

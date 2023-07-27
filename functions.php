@@ -353,15 +353,18 @@ add_filter( 'wpseo_metabox_prio', 'parsber_theme_lower_yoast_metabox_priority' )
  * Remove the "Archives:" from a custom post type archive page title.
  */
 function brister_theme_remove_archive_prefix( $title ) {
-	if ( is_post_type_archive( 'zimmer' ) ) :
+	if ( is_post_type_archive( 'category' ) ) :
 		$title = post_type_archive_title( '', false );
-	elseif ( is_post_type_archive( 'aktivitaten' ) ) :
+	elseif ( is_post_type_archive( 'tag' ) ) :
 		$title = post_type_archive_title( '', false );
 	endif;
 	return $title;
 }
 
 add_filter( 'get_the_archive_title', 'brister_theme_remove_archive_prefix' );
+
+
+
 
 
 // Theme customizer options.

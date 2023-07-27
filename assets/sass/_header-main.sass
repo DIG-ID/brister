@@ -29,12 +29,14 @@
       &::before
         @apply content-[''] block absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-dark-green opacity-0 transition-all duration-500 ease-in-out
       .main-menu-content
-        @apply bg-white w-2/3 md:w-1/4 h-full -translate-x-full transition-all duration-500 drop-shadow py-32 px-8 flex flex-col justify-between
+        @apply bg-white w-2/3 md:w-1/4 h-full -translate-x-full transition-all duration-500 drop-shadow py-32 px-8 flex flex-col
         #menu-main-menu
           @apply flex flex-col gap-6
           .menu-item
             a
               @apply font-montbold text-lg text-dark-green transition-all duration-300 ease-in-out hover:text-lime-green
+        svg
+          @apply my-10
 
   /* Menu nav open */
   .navigation-main.nav-open
