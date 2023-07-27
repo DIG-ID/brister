@@ -1,4 +1,4 @@
-<section class="section-testimonials pt-20 md:pt-36 pb-24 md:pb-40 px-4 md:px-8 w-full bg-dark-green text-center">
+<section class="section-blog pt-20 md:pt-36 pb-24 md:pb-40 px-4 md:px-8 w-full bg-dark-green text-center">
 	<div class="text-center md:px-8 max-w-full md:max-w-screen-md mx-auto">
 		<h2 class="title-section text-light-green"><?php esc_html_e( 'Blog', 'brister' ); ?></h2>
 		<p class="description-section text-light-green">Gutes und gesundes Essen ist Lebensqualität.<br> Zusammen mit unseren Regionalen Partner bieten.</p>
