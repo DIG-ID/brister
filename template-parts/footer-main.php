@@ -28,7 +28,7 @@
 				<?php
 				wp_nav_menu(
 					array(
-						'theme_location' => 'main',
+						'theme_location' => 'footer',
 						'container'      => false,
 						'menu_class'     => 'footer',
 						'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
@@ -41,7 +41,7 @@
 				<?php
 				wp_nav_menu(
 					array(
-						'theme_location' => 'main',
+						'theme_location' => 'footer_terms',
 						'container'      => false,
 						'menu_class'     => 'footer_terms',
 						'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
