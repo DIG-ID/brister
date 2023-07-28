@@ -2,7 +2,7 @@
 
 	<div class="flex items-center justify-center pb-14">
 		<div class="brister-blog-filters">
-			<button class="brister-blog-filters-buttons active" data-filter="*"><?php esc_html_e( 'All', 'brister' ); ?></button>
+			<button class="brister-blog-filters-buttons active" data-filter="*"><?php esc_html_e( 'Alle', 'brister' ); ?></button>
 			<?php
 			foreach ( get_categories( array( 'exclude' => array( 1 ) ) ) as $category ) :
 				echo '<button class="brister-blog-filters-buttons" data-category="' . esc_attr( $category->slug ) . '">' . esc_html( $category->name ) . '</button>';
@@ -10,7 +10,7 @@
 			?>
 		</div>
 		<div class="brister-blog-filters-search-wrapper">
-			<input class="brister-blog-filters-search" type="text" placeholder="Search">
+			<input class="brister-blog-filters-search" type="text" placeholder="Suchen">
 		</div>
 	</div>
 

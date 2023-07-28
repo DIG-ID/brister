@@ -27,7 +27,7 @@ if ( $post_tags ) :
 		?>
 		<aside class="related-posts pt-20 md:pt-36 pb-24 md:pb-40 px-4 md:px-8 border-t border-dark-green">
 			<div class="text-center md:px-8 max-w-full md:max-w-screen-md mx-auto">
-				<h2 class="title-section text-green"><?php esc_html_e( 'Related', 'brister' ); ?></h2>
+				<h2 class="title-section text-green"><?php esc_html_e( 'Verwandte Beiträge', 'brister' ); ?></h2>
 			</div>
 			<div class="blog-grid w-full grid grid-cols-1 lg:grid-cols-12 gap-8">
 				<?php
