@@ -30,7 +30,7 @@
 					array(
 						'theme_location' => 'main',
 						'container'      => false,
-						'menu_class'     => 'main-menu',
+						'menu_class'     => 'footer',
 						'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 						'fallback_cb'    => '__return_false',
 					),
@@ -43,7 +43,7 @@
 					array(
 						'theme_location' => 'main',
 						'container'      => false,
-						'menu_class'     => 'main-menu',
+						'menu_class'     => 'footer_terms',
 						'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 						'fallback_cb'    => '__return_false',
 					),
