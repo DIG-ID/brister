@@ -21,7 +21,7 @@
 				?>
 				<?php do_action( 'socials' ); ?>
 			</div>
-			<div class="md:col-start-5 md:col-span-4 mb-12 lg:mb-0">
+			<div class="md:col-start-4 md:col-span-4 mb-12 lg:mb-0">
 				<?php echo do_shortcode( get_field( 'footer_newsletter_shortcode', 'options' ) ); ?>
 			</div>
 			<div class="md:col-start-9 md:col-span-2 mb-12 lg:mb-0">
