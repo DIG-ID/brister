@@ -372,7 +372,7 @@ require get_template_directory() . '/inc/theme-template-tags.php';
 
 
 // The theme admin settings
-//require get_template_directory() . '/inc/theme-admin-settings.php';
+require get_template_directory() . '/inc/theme-admin-settings.php';
 
 
 // Theme custom ajax loader
