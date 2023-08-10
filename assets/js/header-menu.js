@@ -36,30 +36,31 @@ $(function() {
     /* Hamburguer menu toogle */ 
     const $toggleBtn = $('.main-menu-toggle')
 
-    let togglerTl = gsap.timeline({
+    /*let togglerTl = gsap.timeline({
       defaults: {
-        duration: 0.7,
-        ease: 'ease-in-out',
+        duration: 0.350,
+        ease: 'ease-in',
         autoAlpha: 0
       },
     });
 
     let $targets = gsap.utils.toArray('.main-menu-content .menu-item');
 
-    togglerTl.from($targets, { x:'-50%', opacity: 0, stagger: 0.15});
+    togglerTl.from($targets, { x:'-25%', opacity: 0, stagger: 0.15});
 
     togglerTl.paused(true);
+    */
 
     $toggleBtn.on( 'click', (e) => {
       $('.navigation-main').toggleClass('nav-open');
       $('body').toggleClass('nav-open');
-      if (togglerTl.paused()) {
+      /*if (togglerTl.paused()) {
         togglerTl.play();
       } else if (togglerTl.reversed()) {
         togglerTl.restart().timeScale(1);
       } else {
         togglerTl.timeScale(2).reverse();
-      }
+      }*/
     });
 
   

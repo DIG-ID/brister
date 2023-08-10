@@ -1,5 +1,5 @@
 <header id="header-main" class="header-main w-full fixed top-0 z-10" itemscope itemtype="http://schema.org/WebSite">
-	<nav class="navigation-main px-4 md:px-8  md:py-6" role="navigation" aria-label="<?php esc_attr_e( 'main navigation', 'brister' ); ?>">
+	<nav class="navigation-main px-4 py-4 md:px-8 md:py-6" role="navigation" aria-label="<?php esc_attr_e( 'main navigation', 'brister' ); ?>">
 		<div class="main-header-content flex lg:columns-2 justify-between">
 			<div class="flex items-center gap-3">
 				<button class="main-menu-toggle">

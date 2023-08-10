@@ -18,4 +18,5 @@ if ( have_posts() ) :
 		do_action( 'after_main_content' );
 	endwhile;
 endif;
+get_template_part( 'template-parts/modules/cta-buttons' );
 get_footer();
