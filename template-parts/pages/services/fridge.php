@@ -4,7 +4,7 @@
 		<p class="font-montlight text-base text-dark-green leading-8 mb-12"><?php the_field( 'fridge_description' ); ?></p>
 		<?php
 		if ( have_rows( 'fridge_list' ) ) :
-			echo '<ul class="fridge-list list-image-checkmark list mb-6">';
+			echo '<ul class="fridge-list list-image-checkmark list lg:mb-6">';
 			while ( have_rows( 'fridge_list' ) ) :
 				the_row();
 				$icon = get_sub_field( 'image' );

@@ -3,8 +3,8 @@
 		<div class="w-full mb-8">
 			<?php do_action( 'theme_logo' ); ?>
 		</div>
-		<div class="w-full grid grid-cols-1 md:grid-cols-12 gap-4">
-			<div class="md:col-span-2 mb-12 lg:mb-0">
+		<div class="w-full grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4">
+			<div class="md:col-span-3 lg:col-span-2 mb-12 lg:mb-0">
 				<p class="font-sans text-base text-dark-green leading-7 mb-4"><?php the_field( 'footer_address', 'options' ); ?></p>
 				<?php
 				$email = get_field( 'footer_email', 'options' );
@@ -21,10 +21,10 @@
 				?>
 				<?php do_action( 'socials' ); ?>
 			</div>
-			<div class="md:col-start-4 md:col-span-4 mb-12 lg:mb-0">
+			<div class="lg:col-start-4 md:col-span-3 lg:col-span-4 mb-12 lg:mb-0">
 				<?php echo do_shortcode( get_field( 'footer_newsletter_shortcode', 'options' ) ); ?>
 			</div>
-			<div class="md:col-start-9 md:col-span-2 mb-12 lg:mb-0">
+			<div class="lg:col-start-9 md:col-span-3 lg:col-span-2 mb-12 lg:mb-0">
 				<?php
 				wp_nav_menu(
 					array(
@@ -37,7 +37,7 @@
 				);
 				?>
 			</div>
-			<div class="md:col-span-2">
+			<div class="md:col-span-3 lg:col-span-2">
 				<?php
 				wp_nav_menu(
 					array(

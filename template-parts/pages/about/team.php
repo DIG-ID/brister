@@ -2,14 +2,14 @@
 
 	<?php
 	if ( have_rows( 'team_team_members' ) ) :
-		echo '<div class="lg:col-start-3 lg:col-span-8 flex flex-col lg:flex-row items-center lg:gap-8 py-16">';
+		echo '<div class="lg:col-start-1 xl:col-start-2 lg:col-span-12 xl:col-span-10 flex flex-col lg:flex-row items-center lg:gap-8 py-16">';
 		while ( have_rows( 'team_team_members' ) ) :
 			the_row();
 			$member_img = get_sub_field( 'image' );
 			?>
 				<div class="team-member lg:p-4 mb-20 lg:mb-0">
 					<figure class="relative mb-6 after:content-[''] after:block after:absolute after:bottom-4 after:left-4 after:border-4 after:border-green after:w-full after:h-full after:rounded-tr-3xl after:rounded-br-3xl after:rounded-bl-3xl">
-						<?php echo wp_get_attachment_image( $member_img, 'full', false, array( 'class' => 'w-full max-w-full object-cover rounded-tr-3xl rounded-br-3xl rounded-bl-3xl' ) ); ?>
+						<?php echo wp_get_attachment_image( $member_img, 'full', false, array( 'class' => 'w-full max-w-full object-cover rounded-tr-3xl max-h-[300px] md:max-h-[500px] rounded-br-3xl rounded-bl-3xl' ) ); ?>
 					</figure>
 					<div class="team-member-quote flex mb-6">
 						<svg xmlns="http://www.w3.org/2000/svg" width="36" height="29" viewBox="0 0 36 29" fill="none" class="mr-4"><path d="M13.8 0V6.532C8.74 7.268 6.716 10.764 6.716 14.536H14.444V28.888H0V15.64C0 6.44 5.612 0.919999 13.8 0ZM34.96 0V6.532C29.9 7.268 27.968 10.764 27.968 14.536H35.696V28.888H21.16V15.64C21.16 6.44 26.772 0.919999 34.96 0Z" fill="#10664F"/></svg>

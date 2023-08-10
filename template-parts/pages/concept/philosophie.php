@@ -1,4 +1,4 @@
-<section class="section-philosophie py-20 lg:-py-36 px-4 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-4 items-center relative -mt-48">
+<section class="section-philosophie pt-36 pb-20 lg:-py-36 px-4 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-4 items-center relative -mt-48">
 	<div class="lg:col-span-4 lg:col-start-2 order-2 lg:order-1">
 		<h2 class="title-section text-light-green"><?php the_field( 'philosophie_title' ); ?></h2>
 		<p class="text-body text-light-green"><?php the_field( 'philosophie_description' ); ?></p>
