@@ -79,7 +79,7 @@ function brister_blog_load_posts() {
 			while ( $all_blog_posts->have_posts() ) :
 				$all_blog_posts->the_post();
 
-				$msg .= '<article id="post-' . get_the_ID() . '" class="' . implode( ' ', get_post_class( 'card-blog col-span-1 flex flex-col rounded-3xl overflow-hidden bg-white mb-8 text-start border border-light-green ' ) ) . '">';
+				$msg .= '<article id="post-' . get_the_ID() . '" class="' . implode( ' ', get_post_class( 'card-blog lg:col-span-1 w-full flex flex-col rounded-3xl overflow-hidden bg-white mb-8 text-start border border-light-green ' ) ) . '">';
 				$msg .= '<figure class="relative">';
 				$msg .= '<a href="' . get_the_permalink() . '">' . get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'object-cover' ) ) . '</a>';
 				$msg .= '<span class="absolute top-4 left-4 bg-green text-light-green font-sans text-xs uppercase rounded-full py-2 px-5">';
@@ -102,7 +102,7 @@ function brister_blog_load_posts() {
 			$msg .= '<div class="col-span-12 text-center"><p class="warning text-body text-center text-base">' . __( 'Es wurden keine Veröffentlichungen gefunden, die Ihren Suchkriterien entsprechen.', 'brister' ) . '</p></div>';
 		endif;
 
-		$msg = '<div class="brister-blog-content w-full grid grid-cols-3 gap-8">' . $msg . '</div>';
+		$msg = '<div class="brister-blog-content w-full grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">' . $msg . '</div>';
 
 		$no_of_paginations = ceil( $count / $per_page );
 

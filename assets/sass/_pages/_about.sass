@@ -22,3 +22,12 @@
           @apply shadow-none
       .flickity-page-dot.is-selected
         @apply bg-lime-green w-4 h-4
+
+@media (max-width: 1024px)
+  .page-template-page-about
+    .section-teams
+      &::before
+        @apply content-[''] block absolute top-0 left-0 right-0 bottom-0 bg-dark-green
+        -webkit-clip-path: polygon(0 0, 100% 2%, 100% 100%, 0% 100%)
+        clip-path: polygon(0 0, 100% 2%, 100% 100%, 0% 100%)
+        z-index: -1

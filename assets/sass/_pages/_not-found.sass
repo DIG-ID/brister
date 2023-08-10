@@ -1,0 +1,10 @@
+.error-404.not-found
+  .not-found-content
+    .search-form
+      @apply flex justify-center w-full
+      .search-field
+        @apply w-full border border-green/20 py-3 px-6 rounded-full font-sans text-base text-dark-green
+        &::placeholder
+          @apply font-sans text-gray-300 text-base
+      .search-submit
+        @apply bg-green font-sans font-semibold text-base text-light-green uppercase py-2 px-11 rounded-full transition-all duration-500 ease-in-out hover:text-light-green hover:bg-dark-green hover:cursor-pointer ml-4

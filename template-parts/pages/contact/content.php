@@ -1,6 +1,6 @@
 <section class="section-contact px-4 lg:px-8 py-32 w-full grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
 	<div class="col-span-1 lg:col-start-2 lg:col-span-3 lg:text-end">
-		<h2 class="font-montbold text-4xl text-green uppercase mb-8"><?php the_field( 'contact_title' ); ?></h2>
+		<h2 class="font-montbold text-3xl lg:text-4xl text-green uppercase mb-8"><?php the_field( 'contact_title' ); ?></h2>
 		<p class="font-sans text-base text-dark-green leading-7 mb-4"><?php the_field( 'footer_address', 'options' ); ?></p>
 		<?php
 		$email = get_field( 'contact_email' );

@@ -6,7 +6,11 @@
 	<div class="blog-grid w-full grid grid-cols-1 lg:grid-cols-12 gap-8">
 		<?php
 		$args = array(
-			'post_type' => 'post',
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'posts_per_page' => 3,
+			'orderby'        => 'date',
+			'order'          => 'DESC',
 		);
 		$the_query = new WP_Query( $args );
 		if ( $the_query->have_posts() ) :

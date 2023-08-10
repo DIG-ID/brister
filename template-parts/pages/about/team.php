@@ -1,13 +1,13 @@
-<section class="section-teams w-full py-32 px-8 grid grid-cols-12 gap-4 relative">
+<section class="section-teams w-full py-10 lg:py-32 px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-12 lg:gap-4 relative">
 
 	<?php
 	if ( have_rows( 'team_team_members' ) ) :
-		echo '<div class="col-start-3 col-span-8 flex items-center gap-8">';
+		echo '<div class="lg:col-start-3 lg:col-span-8 flex flex-col lg:flex-row items-center lg:gap-8 py-16">';
 		while ( have_rows( 'team_team_members' ) ) :
 			the_row();
 			$member_img = get_sub_field( 'image' );
 			?>
-				<div class="team-member p-4">
+				<div class="team-member lg:p-4 mb-20 lg:mb-0">
 					<figure class="relative mb-6 after:content-[''] after:block after:absolute after:bottom-4 after:left-4 after:border-4 after:border-green after:w-full after:h-full after:rounded-tr-3xl after:rounded-br-3xl after:rounded-bl-3xl">
 						<?php echo wp_get_attachment_image( $member_img, 'full', false, array( 'class' => 'w-full max-w-full object-cover rounded-tr-3xl rounded-br-3xl rounded-bl-3xl' ) ); ?>
 					</figure>
@@ -17,8 +17,8 @@
 					</div>
 
 
-					<p class="font-montbold text-xl uppercase text-lime-green"><?php the_sub_field( 'name' ); ?></p>
-					<p class="font-sans font-light text-light-green uppercase mb-6"><?php the_sub_field( 'position' ); ?></p>
+					<p class="font-montbold text-base lg:text-xl uppercase text-lime-green"><?php the_sub_field( 'name' ); ?></p>
+					<p class="font-sans font-light text-xs lg:text-xl text-light-green uppercase mb-6"><?php the_sub_field( 'position' ); ?></p>
 
 					<?php
 					$member_phone = get_sub_field( 'phone' );

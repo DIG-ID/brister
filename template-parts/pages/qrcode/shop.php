@@ -1,4 +1,4 @@
-<section class="section-philosophie py-36 px-4 md:px-8 w-full text-center flex flex-col justify-center items-center bg-light-green">
+<section class="section-shop py-36 px-4 md:px-8 w-full text-center flex flex-col justify-center items-center bg-light-green">
 	<div class="md:max-w-screen-md">
 		<h2 class="title-section text-green uppercase mb-6"><?php the_field( 'shop_title' ); ?></h2>
 		<p class="font-montlight text-lg leading-8 text-dark-green mb-12"><?php the_field( 'shop_description' ); ?></p>

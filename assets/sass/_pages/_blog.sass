@@ -1,12 +1,12 @@
 .brister-blog-grid
   .brister-blog-filters
     &-buttons
-      @apply relative inline-block font-sans font-semibold text-lg text-dark-green bg-light-green whitespace-nowrap rounded-full py-3 px-4 mx-2 outline-none cursor-pointer transition-all duration-300 hover:bg-green hover:text-light-green w-40
+      @apply relative inline-block font-sans font-semibold text-base lg:text-lg text-dark-green bg-light-green whitespace-nowrap rounded-full py-3 px-6 lg:px-4 outline-none cursor-pointer transition-all duration-300 hover:bg-green hover:text-light-green w-full lg:w-40 mx-1 lg:mx-2
 
     &-buttons.active
       @apply bg-green text-light-green
     &-search-wrapper
-      @apply w-[300px]
+      @apply w-full lg:w-[300px]
     &-search
       @apply w-full font-sans text-lg text-dark-green bg-light-green rounded-full outline-none py-3 px-6 mx-2
       &::active
@@ -14,7 +14,7 @@
       &::focus-visible
         @apply outline-none
       &::placeholder
-        @apply font-sans text-lg text-dark-green
+        @apply font-sans text-base lg:text-lg text-dark-green
 
 
   .brister-blog-pagination-nav

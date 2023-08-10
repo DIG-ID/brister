@@ -22,7 +22,7 @@
 				<?php do_action( 'socials' ); ?>
 			</div>
 			<div class="md:col-start-5 md:col-span-4">
-				<?php do_shortcode( the_field( 'footer_newsletter_shortcode' ) ); ?>
+				<?php echo do_shortcode( get_field( 'footer_newsletter_shortcode', 'options' ) ); ?>
 			</div>
 			<div class="md:col-start-9 md:col-span-2">
 				<?php
