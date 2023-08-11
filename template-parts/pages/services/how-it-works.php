@@ -1,5 +1,5 @@
 <section class="section-how-it-works py-20 md:py-36 px-4 md:px-8 w-full bg-dark-green grid grid-cols-1 md:grid-cols-12 gap-4 items-center -mt-12 relative -z-[2]">
-	<div class=" md:col-span-4 md:col-start-2 md:text-end mb-6 md:mb-0">
+	<div class="md:col-span-5 xl:col-span-4 md:col-start-1 xl:col-start-2 md:text-end mb-12 md:mb-0">
 		<h2 class="font-montbold text-4xl lg:text-6xl text-light-green uppercase mb-6"><?php echo wp_kses_post( get_field( 'how_it_works_title' ) ); ?></h2>
 		<p class="font-montlight text-lg text-light-green leading-8 lg:mb-4"><?php echo wp_kses_post( get_field( 'how_it_works_description' ) ); ?></p>
 		<?php
@@ -14,14 +14,14 @@
 		endif;
 		?>
 	</div>
-	<div class="md:col-span-4 md:col-start-7">
+	<div class="md:col-span-6 md:col-start-7 xl:col-span-4 xl:col-start-7">
 		<?php
 		if ( have_rows( 'how_it_works_list' ) ) :
 			echo '<ol class="hiw-list list-decimal marker:text-lime-green marker:text-4xl lg:marker:text-6xl marker:font-montbold">';
 			while ( have_rows( 'how_it_works_list' ) ) :
 				the_row();
 				?>
-				<li class="pl-2 lg:pl-4 ml-8 lg:ml-16 md:ml-4 mb-12 lg:mb-24">
+				<li class="pl-2 lg:pl-4 ml-8 lg:ml-16 md:ml-4 mb-12 lg:mb-12 xl:mb-24">
 					<p class="font-sans text-xl lg:text-2xl text-light-green break-words hyphens-auto"><?php the_sub_field( 'description' ); ?></p>
 				</li>
 				<?php
