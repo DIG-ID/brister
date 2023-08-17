@@ -1,6 +1,6 @@
 <header class="page-header bg-gradient-to-b from-dark-green to-green grid grid-cols-1 lg:grid-cols-12 gap-4 px-4 lg:px-8 items-center pt-28 lg:pt-56 pb-52 lg:pb-96">
-	<div class="lg:col-start-3 lg:col-span-7">
-		<h1 class="font-montbold font-extrabold text-white text-3xl lg:text-6xl uppercase mb-2 w-full lg:max-w-7xl"><?php the_title(); ?></h1>
+	<div class="lg:col-start-2 xl:col-start-3 lg:col-span-10 xl:col-span-7">
+		<h1 class="font-montbold font-extrabold text-white text-3xl lg:text-6xl uppercase mb-2 w-full xl:max-w-7xl"><?php the_title(); ?></h1>
 		<?php do_action( 'breadcrumbs' ); ?>
 		<div class="post-details flex items-center gap-4 mt-3">
 			<span class="flex items-center gap-2 text-light-green font-sans text-sm">
