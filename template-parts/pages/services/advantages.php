@@ -4,7 +4,7 @@
 		<p class="text-body text-dark-green mb-12"><?php the_field( 'advantages_description' ); ?></p>
 		<?php
 		if ( have_rows( 'advantages_list' ) ) :
-			echo '<ul class="advantages-list w-full list lg:columns-2 lg:gap-8 text-start">';
+			echo '<ul class="advantages-list w-full list lg:columns-2 lg:gap-8 text-start lg:mx-12">';
 			while ( have_rows( 'advantages_list' ) ) :
 				the_row();
 				?>

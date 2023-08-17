@@ -2,7 +2,7 @@
 
 	<?php
 	if ( have_rows( 'team_team_members' ) ) :
-		echo '<div class="lg:col-start-1 xl:col-start-2 lg:col-span-12 xl:col-span-10 flex flex-col lg:flex-row items-center lg:gap-8 py-16">';
+		echo '<div class="lg:col-start-3 xl:col-start-5 lg:col-span-8 xl:col-span-4 flex flex-col lg:flex-row items-center lg:gap-8 py-16">';
 		while ( have_rows( 'team_team_members' ) ) :
 			the_row();
 			$member_img = get_sub_field( 'image' );

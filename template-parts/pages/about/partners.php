@@ -10,7 +10,7 @@
 			$partner_logo = get_sub_field( 'logo' );
 			$partner_url  = get_sub_field( 'url' );
 			?>
-			<a href="<?php echo esc_url( $partner_url ); ?>" target="_blank" class="partner carousel-cell flex flex-col items-center justify-center my-8 lg:my-0 lg:p-4 lg:mx-8">
+			<a href="<?php echo esc_url( $partner_url ); ?>" target="_blank" class="partner carousel-cell flex flex-col items-center justify-center my-8 lg:my-0 lg:p-4 lg:mx-4">
 				<?php echo wp_get_attachment_image( $partner_logo, 'full', false, array( 'class' => ' object-cover block max-w-[200px]' ) ); ?>
 			</a>
 			<?php
