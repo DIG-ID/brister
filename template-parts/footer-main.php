@@ -9,7 +9,7 @@
 				<?php
 				$email = get_field( 'footer_email', 'options' );
 				if ( $email ) :
-					?><a class="font-sans text-base text-dark-green leading-7 block transition-all duration-300 ease-in-out hover:text-green hover:underline underline-offset-4" href="mailto:<?php echo esc_url( $email ); ?>"> <?php echo $email; ?></a><?php
+					?><a class="font-sans text-base text-dark-green leading-7 block transition-all duration-300 ease-in-out hover:text-green hover:underline underline-offset-4" href="mailto:<?php echo esc_attr( $email ); ?>"> <?php echo $email; ?></a><?php
 				endif;
 				?>
 				<?php
