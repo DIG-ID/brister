@@ -363,6 +363,18 @@ function brister_theme_remove_archive_prefix( $title ) {
 
 add_filter( 'get_the_archive_title', 'brister_theme_remove_archive_prefix' );
 
+/**
+ * Load recaptcha for Contact Form 7 only on pages where contact form exists.
+ */
+function brister_theme_cf7_load( $title ) {
+	global $post;
+	if ( is_a( $post, 'WP_Post' ) && ! has_shortcode( $post->post_content, 'contact-form-7' ) ) {
+		wp_dequeue_script( 'google-recaptcha' );
+		wp_dequeue_script( 'wpcf7-recaptcha' );
+	}
+}
+
+add_action( 'wp_print_scripts', 'brister_theme_cf7_load' );
 
 // Theme customizer options.
 //require get_template_directory() . '/inc/customizer.php';
@@ -379,12 +391,10 @@ require get_template_directory() . '/inc/theme-admin-settings.php';
 require get_template_directory() . '/inc/ajax-loader.php';
 
 
-
-function console_log( $output, $with_script_tags = true ) {
+/*function console_log( $output, $with_script_tags = true ) {
 	$js_code = 'console.log(' . wp_json_encode( $output, JSON_HEX_TAG ) . ');';
 	if ( $with_script_tags ) :
 		$js_code = '<script>' . $js_code . '</script>';
 	endif;
 	echo $js_code;
-}
-
+}*/
