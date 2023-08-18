@@ -1,6 +1,6 @@
 <section class="section-partners py-20 md:py-36 w-full">
 	<div class="text-center px-4 md:px-8 md:max-w-screen-md mx-auto">
-		<h2 class="title-section text-green"><?php esc_html_e( 'Partners', 'brister' ); ?></h2>
+		<h2 class="title-section text-green"><?php esc_html_e( 'Partner', 'brister' ); ?></h2>
 	</div>
 	<?php
 	if ( have_rows( 'partners_partners_list' ) ) :
