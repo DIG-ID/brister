@@ -36,7 +36,7 @@
 					<?php
 				endif;
 				$link_shop = get_field( 'cta_buttons_got_to_shop', 'options' );
-				if ( $link_shop ) :
+				/*if ( $link_shop ) :
 					$link_url    = $link_shop['url'];
 					$link_title  = $link_shop['title'];
 					$link_target = $link_shop['target'] ? $link_shop['target'] : '_self';
@@ -48,7 +48,7 @@
 						</svg>
 					</a>
 					<?php
-				endif;
+				endif;*/
 				?>
 			</div>
 		</div>
